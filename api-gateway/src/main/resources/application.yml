@@ -15,6 +15,11 @@ spring:
               predicates:
                 - Path=/api/customers/**
 
+            - id: workorder-service-route
+              uri: lb://workorder-service
+              predicates:
+                - Path=/api/workorders/**
+
             - id: pdi-service-route
               uri: lb://pdi-service
               predicates:
